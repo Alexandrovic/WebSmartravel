@@ -1,0 +1,86 @@
+Travel\AgenceBundle\Entity\RespoAgence:
+    type: entity
+    table: respo_agence
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nom:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+        prenom:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+        cin:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: CIN
+        eMail:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+            column: e_mail
+        password:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+        dateInscription:
+            type: date
+            nullable: true
+            comment: ''
+            column: date_inscription
+        nomAgence:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+            column: nom_agence
+        active:
+            type: boolean
+            nullable: false
+            comment: ''
+            default: '0'
+        commentaire:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: ''
+        region:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+        longitude:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            comment: ''
+        latitude:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            comment: ''
+    lifecycleCallbacks: {  }

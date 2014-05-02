@@ -1,0 +1,101 @@
+Travel\AgenceBundle\Entity\Voyage:
+    type: entity
+    table: voyage
+    indexes:
+        fk_voyage_respo_agence1_idx:
+            columns:
+                - voyage_responsable
+        hotel-id:
+            columns:
+                - hotel-id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        moyenTransport:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+            column: moyen_transport
+        destination:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+        budget:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            comment: ''
+        nbPlace:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: nb_place
+        programme:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+        itineraire:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+        dateDepart:
+            type: date
+            nullable: true
+            comment: ''
+            column: date_depart
+        dateRetour:
+            type: date
+            nullable: true
+            comment: ''
+            column: date_retour
+        type:
+            type: string
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: Type
+        typesortie:
+            type: string
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+            column: TypeSortie
+    manyToOne:
+        voyageResponsable:
+            targetEntity: RespoAgence
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                voyage_responsable:
+                    referencedColumnName: id
+            orphanRemoval: false
+        hotelId:
+            targetEntity: Hotels
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                hotel-id:
+                    referencedColumnName: Id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

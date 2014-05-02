@@ -1,0 +1,4 @@
+travel_agence:
+    resource: "@TravelAgenceBundle/Resources/config/routing.yml"
+    prefix:   /
+

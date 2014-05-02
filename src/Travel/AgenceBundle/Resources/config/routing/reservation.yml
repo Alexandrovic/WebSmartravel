@@ -1,0 +1,30 @@
+travel_reservation:
+    pattern:  /
+    defaults: { _controller: "TravelAgenceBundle:Reservation:index" }
+
+travel_reservation_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TravelAgenceBundle:Reservation:show" }
+
+travel_reservation_new:
+    pattern:  /new
+    defaults: { _controller: "TravelAgenceBundle:Reservation:new" }
+
+travel_reservation_create:
+    pattern:  /create
+    defaults: { _controller: "TravelAgenceBundle:Reservation:create" }
+    requirements: { _method: post }
+
+travel_reservation_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "TravelAgenceBundle:Reservation:edit" }
+
+travel_reservation_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "TravelAgenceBundle:Reservation:update" }
+    requirements: { _method: post|put }
+
+travel_reservation_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TravelAgenceBundle:Reservation:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,40 @@
+Facture:
+    type: entity
+    table: facture
+    indexes:
+        id_reservation:
+            columns:
+                - id_reservation
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        sommeFacture:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            comment: ''
+            column: somme_facture
+        datePayementFacture:
+            type: date
+            nullable: true
+            comment: ''
+            column: date_payement_facture
+    manyToOne:
+        idReservation:
+            targetEntity: Reservation
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_reservation:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

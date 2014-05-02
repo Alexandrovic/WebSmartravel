@@ -1,0 +1,30 @@
+travel_admin:
+    pattern:  /
+    defaults: { _controller: "TravelAgenceBundle:Administrateur:index" }
+
+travel_admin_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TravelAgenceBundle:Administrateur:show" }
+
+travel_admin_new:
+    pattern:  /new
+    defaults: { _controller: "TravelAgenceBundle:Administrateur:new" }
+
+travel_admin_create:
+    pattern:  /create
+    defaults: { _controller: "TravelAgenceBundle:Administrateur:create" }
+    requirements: { _method: post }
+
+travel_admin_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "TravelAgenceBundle:Administrateur:edit" }
+
+travel_admin_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "TravelAgenceBundle:Administrateur:update" }
+    requirements: { _method: post|put }
+
+travel_admin_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TravelAgenceBundle:Administrateur:delete" }
+    requirements: { _method: post|delete }

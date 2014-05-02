@@ -1,0 +1,61 @@
+Reservation:
+    type: entity
+    table: reservation
+    indexes:
+        fk_reservation_voyageur_idx:
+            columns:
+                - voyageur_reservation
+        fk_reservation_voyage1_idx:
+            columns:
+                - voyage_reservation
+        fk_reservation_facture1_idx:
+            columns:
+                - facture_reservation
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        dateReservation:
+            type: date
+            nullable: true
+            comment: ''
+            column: date_reservation
+        payement:
+            type: boolean
+            nullable: true
+            comment: ''
+    manyToOne:
+        voyageurReservation:
+            targetEntity: Voyageur
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                voyageur_reservation:
+                    referencedColumnName: id
+            orphanRemoval: false
+        voyageReservation:
+            targetEntity: Voyage
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                voyage_reservation:
+                    referencedColumnName: id
+            orphanRemoval: false
+        factureReservation:
+            targetEntity: Facture
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                facture_reservation:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

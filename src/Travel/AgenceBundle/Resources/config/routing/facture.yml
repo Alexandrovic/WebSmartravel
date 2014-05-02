@@ -1,0 +1,30 @@
+travel_facture:
+    pattern:  /
+    defaults: { _controller: "TravelAgenceBundle:Facture:index" }
+
+travel_facture_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TravelAgenceBundle:Facture:show" }
+
+travel_facture_new:
+    pattern:  /new
+    defaults: { _controller: "TravelAgenceBundle:Facture:new" }
+
+travel_facture_create:
+    pattern:  /create
+    defaults: { _controller: "TravelAgenceBundle:Facture:create" }
+    requirements: { _method: post }
+
+travel_facture_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "TravelAgenceBundle:Facture:edit" }
+
+travel_facture_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "TravelAgenceBundle:Facture:update" }
+    requirements: { _method: post|put }
+
+travel_facture_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TravelAgenceBundle:Facture:delete" }
+    requirements: { _method: post|delete }

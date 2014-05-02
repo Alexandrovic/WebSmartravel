@@ -1,0 +1,68 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Voyage</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Moyentransport</th>
+                <td>{{ entity.moyenTransport }}</td>
+            </tr>
+            <tr>
+                <th>Destination</th>
+                <td>{{ entity.destination }}</td>
+            </tr>
+            <tr>
+                <th>Budget</th>
+                <td>{{ entity.budget }}</td>
+            </tr>
+            <tr>
+                <th>Nbplace</th>
+                <td>{{ entity.nbPlace }}</td>
+            </tr>
+            <tr>
+                <th>Programme</th>
+                <td>{{ entity.programme }}</td>
+            </tr>
+            <tr>
+                <th>Itineraire</th>
+                <td>{{ entity.itineraire }}</td>
+            </tr>
+            <tr>
+                <th>Datedepart</th>
+                <td>{{ entity.dateDepart|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Dateretour</th>
+                <td>{{ entity.dateRetour|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ entity.type }}</td>
+            </tr>
+            <tr>
+                <th>Typesortie</th>
+                <td>{{ entity.typesortie }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('travel_voyage') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('travel_voyage_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

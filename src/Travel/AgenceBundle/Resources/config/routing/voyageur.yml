@@ -1,0 +1,30 @@
+travel_voyageur:
+    pattern:  /
+    defaults: { _controller: "TravelAgenceBundle:Voyageur:index" }
+
+travel_voyageur_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TravelAgenceBundle:Voyageur:show" }
+
+travel_voyageur_new:
+    pattern:  /new
+    defaults: { _controller: "TravelAgenceBundle:Voyageur:new" }
+
+travel_voyageur_create:
+    pattern:  /create
+    defaults: { _controller: "TravelAgenceBundle:Voyageur:create" }
+    requirements: { _method: post }
+
+travel_voyageur_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "TravelAgenceBundle:Voyageur:edit" }
+
+travel_voyageur_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "TravelAgenceBundle:Voyageur:update" }
+    requirements: { _method: post|put }
+
+travel_voyageur_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TravelAgenceBundle:Voyageur:delete" }
+    requirements: { _method: post|delete }

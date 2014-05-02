@@ -1,0 +1,30 @@
+travel_agence:
+    pattern:  /
+    defaults: { _controller: "TravelAgenceBundle:RespoAgence:index" }
+
+travel_agence_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TravelAgenceBundle:RespoAgence:show" }
+
+travel_agence_new:
+    pattern:  /new
+    defaults: { _controller: "TravelAgenceBundle:RespoAgence:new" }
+
+travel_agence_create:
+    pattern:  /create
+    defaults: { _controller: "TravelAgenceBundle:RespoAgence:create" }
+    requirements: { _method: post }
+
+travel_agence_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "TravelAgenceBundle:RespoAgence:edit" }
+
+travel_agence_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "TravelAgenceBundle:RespoAgence:update" }
+    requirements: { _method: post|put }
+
+travel_agence_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TravelAgenceBundle:RespoAgence:delete" }
+    requirements: { _method: post|delete }

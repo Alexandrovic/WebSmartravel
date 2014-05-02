@@ -1,0 +1,35 @@
+travel_agence_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: TravelAgenceBundle:Default:index }
+    
+TravelAgenceBundle_travel_voyageur:
+     resource: "@TravelAgenceBundle/Resources/config/routing/voyageur.yml"
+     prefix:   /travel_voyageur
+
+TravelAgenceBundle_travel_hotel:
+     resource: "@TravelAgenceBundle/Resources/config/routing/hotels.yml"
+     prefix:   /travel_hotel
+     
+TravelAgenceBundle_travel_admin:
+        resource: "@TravelAgenceBundle/Resources/config/routing/administrateur.yml"
+        prefix:   /travel_admin     
+        
+TravelAgenceBundle_travel_facture:
+        resource: "@TravelAgenceBundle/Resources/config/routing/facture.yml"
+        prefix:   /travel_facture     
+             
+TravelAgenceBundle_travel_agence:
+        resource: "@TravelAgenceBundle/Resources/config/routing/respoagence.yml"
+        prefix:   /travel_agence
+        
+TravelAgenceBundle_travel_reservation:
+        resource: "@TravelAgenceBundle/Resources/config/routing/reservation.yml"
+        prefix:   /travel_reservation
+        
+TravelAgenceBundle_travel_voypropose:
+        resource: "@TravelAgenceBundle/Resources/config/routing/voyageurhasvoyage.yml"
+        prefix:   /travel_voypropose        
+        
+TravelAgenceBundle_travel_voyage:
+        resource: "@TravelAgenceBundle/Resources/config/routing/voyage.yml"
+        prefix:   /travel_voyage    
