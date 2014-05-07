@@ -1,0 +1,30 @@
+travel_hotel:
+    pattern:  /
+    defaults: { _controller: "TravelAgenceBundle:Hotel:index" }
+
+travel_hotel_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TravelAgenceBundle:Hotel:show" }
+
+travel_hotel_new:
+    pattern:  /new
+    defaults: { _controller: "TravelAgenceBundle:Hotel:new" }
+
+travel_hotel_create:
+    pattern:  /create
+    defaults: { _controller: "TravelAgenceBundle:Hotel:create" }
+    requirements: { _method: post }
+
+travel_hotel_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "TravelAgenceBundle:Hotel:edit" }
+
+travel_hotel_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "TravelAgenceBundle:Hotel:update" }
+    requirements: { _method: post|put }
+
+travel_hotel_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TravelAgenceBundle:Hotel:delete" }
+    requirements: { _method: post|delete }

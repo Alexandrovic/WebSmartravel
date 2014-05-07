@@ -11,6 +11,7 @@
                 <th>Prenom</th>
                 <th>Cin</th>
                 <th>Email</th>
+                <th>Phonenumber</th>
                 <th>Password</th>
                 <th>Dateinscription</th>
                 <th>Nomagence</th>
@@ -30,6 +31,7 @@
                 <td>{{ entity.prenom }}</td>
                 <td>{{ entity.cin }}</td>
                 <td>{{ entity.eMail }}</td>
+                <td>{{ entity.phoneNumber }}</td>
                 <td>{{ entity.password }}</td>
                 <td>{% if entity.dateInscription %}{{ entity.dateInscription|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{{ entity.nomAgence }}</td>

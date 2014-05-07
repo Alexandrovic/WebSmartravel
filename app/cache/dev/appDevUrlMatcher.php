@@ -208,17 +208,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                         return $this->redirect($pathinfo.'/', 'travel_hotel');
                     }
 
-                    return array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\HotelsController::indexAction',  '_route' => 'travel_hotel',);
+                    return array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\HotelController::indexAction',  '_route' => 'travel_hotel',);
                 }
 
                 // travel_hotel_show
                 if (preg_match('#^/travel_hotel/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_hotel_show')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\HotelsController::showAction',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_hotel_show')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\HotelController::showAction',));
                 }
 
                 // travel_hotel_new
                 if ($pathinfo === '/travel_hotel/new') {
-                    return array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\HotelsController::newAction',  '_route' => 'travel_hotel_new',);
+                    return array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\HotelController::newAction',  '_route' => 'travel_hotel_new',);
                 }
 
                 // travel_hotel_create
@@ -228,13 +228,13 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                         goto not_travel_hotel_create;
                     }
 
-                    return array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\HotelsController::createAction',  '_route' => 'travel_hotel_create',);
+                    return array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\HotelController::createAction',  '_route' => 'travel_hotel_create',);
                 }
                 not_travel_hotel_create:
 
                 // travel_hotel_edit
                 if (preg_match('#^/travel_hotel/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_hotel_edit')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\HotelsController::editAction',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_hotel_edit')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\HotelController::editAction',));
                 }
 
                 // travel_hotel_update
@@ -244,7 +244,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                         goto not_travel_hotel_update;
                     }
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_hotel_update')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\HotelsController::updateAction',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_hotel_update')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\HotelController::updateAction',));
                 }
                 not_travel_hotel_update:
 
@@ -255,7 +255,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                         goto not_travel_hotel_delete;
                     }
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_hotel_delete')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\HotelsController::deleteAction',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_hotel_delete')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\HotelController::deleteAction',));
                 }
                 not_travel_hotel_delete:
 
@@ -501,126 +501,63 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             }
 
-            if (0 === strpos($pathinfo, '/travel_voy')) {
-                if (0 === strpos($pathinfo, '/travel_voypropose')) {
-                    // travel_voypropose
-                    if (rtrim($pathinfo, '/') === '/travel_voypropose') {
-                        if (substr($pathinfo, -1) !== '/') {
-                            return $this->redirect($pathinfo.'/', 'travel_voypropose');
-                        }
-
-                        return array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageurHasVoyageController::indexAction',  '_route' => 'travel_voypropose',);
+            if (0 === strpos($pathinfo, '/travel_voyage')) {
+                // travel_voyage
+                if (rtrim($pathinfo, '/') === '/travel_voyage') {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'travel_voyage');
                     }
 
-                    // travel_voypropose_show
-                    if (preg_match('#^/travel_voypropose/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_voypropose_show')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageurHasVoyageController::showAction',));
-                    }
-
-                    // travel_voypropose_new
-                    if ($pathinfo === '/travel_voypropose/new') {
-                        return array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageurHasVoyageController::newAction',  '_route' => 'travel_voypropose_new',);
-                    }
-
-                    // travel_voypropose_create
-                    if ($pathinfo === '/travel_voypropose/create') {
-                        if ($this->context->getMethod() != 'POST') {
-                            $allow[] = 'POST';
-                            goto not_travel_voypropose_create;
-                        }
-
-                        return array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageurHasVoyageController::createAction',  '_route' => 'travel_voypropose_create',);
-                    }
-                    not_travel_voypropose_create:
-
-                    // travel_voypropose_edit
-                    if (preg_match('#^/travel_voypropose/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_voypropose_edit')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageurHasVoyageController::editAction',));
-                    }
-
-                    // travel_voypropose_update
-                    if (preg_match('#^/travel_voypropose/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
-                        if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
-                            $allow = array_merge($allow, array('POST', 'PUT'));
-                            goto not_travel_voypropose_update;
-                        }
-
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_voypropose_update')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageurHasVoyageController::updateAction',));
-                    }
-                    not_travel_voypropose_update:
-
-                    // travel_voypropose_delete
-                    if (preg_match('#^/travel_voypropose/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                        if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
-                            $allow = array_merge($allow, array('POST', 'DELETE'));
-                            goto not_travel_voypropose_delete;
-                        }
-
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_voypropose_delete')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageurHasVoyageController::deleteAction',));
-                    }
-                    not_travel_voypropose_delete:
-
+                    return array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageController::indexAction',  '_route' => 'travel_voyage',);
                 }
 
-                if (0 === strpos($pathinfo, '/travel_voyage')) {
-                    // travel_voyage
-                    if (rtrim($pathinfo, '/') === '/travel_voyage') {
-                        if (substr($pathinfo, -1) !== '/') {
-                            return $this->redirect($pathinfo.'/', 'travel_voyage');
-                        }
-
-                        return array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageController::indexAction',  '_route' => 'travel_voyage',);
-                    }
-
-                    // travel_voyage_show
-                    if (preg_match('#^/travel_voyage/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_voyage_show')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageController::showAction',));
-                    }
-
-                    // travel_voyage_new
-                    if ($pathinfo === '/travel_voyage/new') {
-                        return array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageController::newAction',  '_route' => 'travel_voyage_new',);
-                    }
-
-                    // travel_voyage_create
-                    if ($pathinfo === '/travel_voyage/create') {
-                        if ($this->context->getMethod() != 'POST') {
-                            $allow[] = 'POST';
-                            goto not_travel_voyage_create;
-                        }
-
-                        return array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageController::createAction',  '_route' => 'travel_voyage_create',);
-                    }
-                    not_travel_voyage_create:
-
-                    // travel_voyage_edit
-                    if (preg_match('#^/travel_voyage/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_voyage_edit')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageController::editAction',));
-                    }
-
-                    // travel_voyage_update
-                    if (preg_match('#^/travel_voyage/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
-                        if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
-                            $allow = array_merge($allow, array('POST', 'PUT'));
-                            goto not_travel_voyage_update;
-                        }
-
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_voyage_update')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageController::updateAction',));
-                    }
-                    not_travel_voyage_update:
-
-                    // travel_voyage_delete
-                    if (preg_match('#^/travel_voyage/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                        if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
-                            $allow = array_merge($allow, array('POST', 'DELETE'));
-                            goto not_travel_voyage_delete;
-                        }
-
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_voyage_delete')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageController::deleteAction',));
-                    }
-                    not_travel_voyage_delete:
-
+                // travel_voyage_show
+                if (preg_match('#^/travel_voyage/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_voyage_show')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageController::showAction',));
                 }
+
+                // travel_voyage_new
+                if ($pathinfo === '/travel_voyage/new') {
+                    return array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageController::newAction',  '_route' => 'travel_voyage_new',);
+                }
+
+                // travel_voyage_create
+                if ($pathinfo === '/travel_voyage/create') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_travel_voyage_create;
+                    }
+
+                    return array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageController::createAction',  '_route' => 'travel_voyage_create',);
+                }
+                not_travel_voyage_create:
+
+                // travel_voyage_edit
+                if (preg_match('#^/travel_voyage/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_voyage_edit')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageController::editAction',));
+                }
+
+                // travel_voyage_update
+                if (preg_match('#^/travel_voyage/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                        $allow = array_merge($allow, array('POST', 'PUT'));
+                        goto not_travel_voyage_update;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_voyage_update')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageController::updateAction',));
+                }
+                not_travel_voyage_update:
+
+                // travel_voyage_delete
+                if (preg_match('#^/travel_voyage/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                        $allow = array_merge($allow, array('POST', 'DELETE'));
+                        goto not_travel_voyage_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'travel_voyage_delete')), array (  '_controller' => 'Travel\\AgenceBundle\\Controller\\VoyageController::deleteAction',));
+                }
+                not_travel_voyage_delete:
 
             }
 

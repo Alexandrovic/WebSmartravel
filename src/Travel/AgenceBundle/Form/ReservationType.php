@@ -17,9 +17,9 @@ class ReservationType extends AbstractType
         $builder
             ->add('dateReservation')
             ->add('payement')
-            ->add('voyageurReservation')
-            ->add('voyageReservation')
-            ->add('factureReservation')
+            ->add('facture')
+            ->add('voyageur')
+            ->add('voyage')
         ;
     }
     

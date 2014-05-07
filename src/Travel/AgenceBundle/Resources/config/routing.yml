@@ -7,7 +7,7 @@ TravelAgenceBundle_travel_voyageur:
      prefix:   /travel_voyageur
 
 TravelAgenceBundle_travel_hotel:
-     resource: "@TravelAgenceBundle/Resources/config/routing/hotels.yml"
+     resource: "@TravelAgenceBundle/Resources/config/routing/hotel.yml"
      prefix:   /travel_hotel
      
 TravelAgenceBundle_travel_admin:
@@ -25,11 +25,7 @@ TravelAgenceBundle_travel_agence:
 TravelAgenceBundle_travel_reservation:
         resource: "@TravelAgenceBundle/Resources/config/routing/reservation.yml"
         prefix:   /travel_reservation
-        
-TravelAgenceBundle_travel_voypropose:
-        resource: "@TravelAgenceBundle/Resources/config/routing/voyageurhasvoyage.yml"
-        prefix:   /travel_voypropose        
-        
+    
 TravelAgenceBundle_travel_voyage:
         resource: "@TravelAgenceBundle/Resources/config/routing/voyage.yml"
         prefix:   /travel_voyage    

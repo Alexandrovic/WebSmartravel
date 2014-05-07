@@ -17,7 +17,7 @@ class FactureType extends AbstractType
         $builder
             ->add('sommeFacture')
             ->add('datePayementFacture')
-            ->add('idReservation')
+            ->add('reservation')
         ;
     }
     

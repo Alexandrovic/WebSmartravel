@@ -25,8 +25,10 @@ class VoyageType extends AbstractType
             ->add('dateRetour')
             ->add('type')
             ->add('typesortie')
-            ->add('voyageResponsable')
+            ->add('image')
+            ->add('respoAgence')
             ->add('hotelId')
+            ->add('voyageur')
         ;
     }
     

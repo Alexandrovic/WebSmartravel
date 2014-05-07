@@ -17,6 +17,7 @@
                 <th>Dateretour</th>
                 <th>Type</th>
                 <th>Typesortie</th>
+                <th>Image</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -34,6 +35,7 @@
                 <td>{% if entity.dateRetour %}{{ entity.dateRetour|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{{ entity.type }}</td>
                 <td>{{ entity.typesortie }}</td>
+                <td>{{ entity.image }}</td>
                 <td>
                 <ul>
                     <li>

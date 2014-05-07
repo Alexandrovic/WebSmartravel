@@ -20,6 +20,7 @@ class AdministrateurType extends AbstractType
             ->add('prenom')
             ->add('eMail')
             ->add('password')
+            ->add('image')
         ;
     }
     

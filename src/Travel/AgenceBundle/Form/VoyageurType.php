@@ -17,9 +17,12 @@ class VoyageurType extends AbstractType
         $builder
             ->add('nom')
             ->add('prenom')
+            ->add('login')
             ->add('eMail')
             ->add('password')
             ->add('dateInscription')
+            ->add('image')
+            ->add('voyage')
         ;
     }
     

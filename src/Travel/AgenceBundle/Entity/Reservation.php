@@ -6,38 +6,65 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Reservation
+ *
+ * @ORM\Table(name="reservation", indexes={@ORM\Index(name="fk_reservation_voyageur_idx", columns={"voyageur_id"}), @ORM\Index(name="fk_reservation_voyage1_idx", columns={"voyage_id"}), @ORM\Index(name="fk_reservation_facture1_idx", columns={"facture_id"})})
+ * @ORM\Entity
  */
 class Reservation
 {
     /**
      * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
     /**
      * @var \DateTime
+     *
+     * @ORM\Column(name="date_reservation", type="date", nullable=true)
      */
     private $dateReservation;
 
     /**
      * @var boolean
+     *
+     * @ORM\Column(name="payement", type="boolean", nullable=true)
      */
     private $payement;
 
     /**
-     * @var \Travel\AgenceBundle\Entity\Voyageur
+     * @var \Facture
+     *
+     * @ORM\ManyToOne(targetEntity="Facture")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="facture_id", referencedColumnName="id")
+     * })
      */
-    private $voyageurReservation;
+    private $facture;
 
     /**
-     * @var \Travel\AgenceBundle\Entity\Voyage
+     * @var \Voyageur
+     *
+     * @ORM\ManyToOne(targetEntity="Voyageur")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="voyageur_id", referencedColumnName="id")
+     * })
      */
-    private $voyageReservation;
+    private $voyageur;
 
     /**
-     * @var \Travel\AgenceBundle\Entity\Facture
+     * @var \Voyage
+     *
+     * @ORM\ManyToOne(targetEntity="Voyage")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="voyage_id", referencedColumnName="id")
+     * })
      */
-    private $factureReservation;
+    private $voyage;
+
 
 
     /**
@@ -97,71 +124,71 @@ class Reservation
     }
 
     /**
-     * Set voyageurReservation
+     * Set facture
      *
-     * @param \Travel\AgenceBundle\Entity\Voyageur $voyageurReservation
+     * @param \Travel\AgenceBundle\Entity\Facture $facture
      * @return Reservation
      */
-    public function setVoyageurReservation(\Travel\AgenceBundle\Entity\Voyageur $voyageurReservation = null)
+    public function setFacture(\Travel\AgenceBundle\Entity\Facture $facture = null)
     {
-        $this->voyageurReservation = $voyageurReservation;
+        $this->facture = $facture;
 
         return $this;
     }
 
     /**
-     * Get voyageurReservation
-     *
-     * @return \Travel\AgenceBundle\Entity\Voyageur 
-     */
-    public function getVoyageurReservation()
-    {
-        return $this->voyageurReservation;
-    }
-
-    /**
-     * Set voyageReservation
-     *
-     * @param \Travel\AgenceBundle\Entity\Voyage $voyageReservation
-     * @return Reservation
-     */
-    public function setVoyageReservation(\Travel\AgenceBundle\Entity\Voyage $voyageReservation = null)
-    {
-        $this->voyageReservation = $voyageReservation;
-
-        return $this;
-    }
-
-    /**
-     * Get voyageReservation
-     *
-     * @return \Travel\AgenceBundle\Entity\Voyage 
-     */
-    public function getVoyageReservation()
-    {
-        return $this->voyageReservation;
-    }
-
-    /**
-     * Set factureReservation
-     *
-     * @param \Travel\AgenceBundle\Entity\Facture $factureReservation
-     * @return Reservation
-     */
-    public function setFactureReservation(\Travel\AgenceBundle\Entity\Facture $factureReservation = null)
-    {
-        $this->factureReservation = $factureReservation;
-
-        return $this;
-    }
-
-    /**
-     * Get factureReservation
+     * Get facture
      *
      * @return \Travel\AgenceBundle\Entity\Facture 
      */
-    public function getFactureReservation()
+    public function getFacture()
     {
-        return $this->factureReservation;
+        return $this->facture;
+    }
+
+    /**
+     * Set voyageur
+     *
+     * @param \Travel\AgenceBundle\Entity\Voyageur $voyageur
+     * @return Reservation
+     */
+    public function setVoyageur(\Travel\AgenceBundle\Entity\Voyageur $voyageur = null)
+    {
+        $this->voyageur = $voyageur;
+
+        return $this;
+    }
+
+    /**
+     * Get voyageur
+     *
+     * @return \Travel\AgenceBundle\Entity\Voyageur 
+     */
+    public function getVoyageur()
+    {
+        return $this->voyageur;
+    }
+
+    /**
+     * Set voyage
+     *
+     * @param \Travel\AgenceBundle\Entity\Voyage $voyage
+     * @return Reservation
+     */
+    public function setVoyage(\Travel\AgenceBundle\Entity\Voyage $voyage = null)
+    {
+        $this->voyage = $voyage;
+
+        return $this;
+    }
+
+    /**
+     * Get voyage
+     *
+     * @return \Travel\AgenceBundle\Entity\Voyage 
+     */
+    public function getVoyage()
+    {
+        return $this->voyage;
     }
 }

@@ -19,6 +19,7 @@ class RespoAgenceType extends AbstractType
             ->add('prenom')
             ->add('cin')
             ->add('eMail')
+            ->add('phoneNumber')
             ->add('password')
             ->add('dateInscription')
             ->add('nomAgence')

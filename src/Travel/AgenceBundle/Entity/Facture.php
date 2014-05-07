@@ -6,28 +6,45 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Facture
+ *
+ * @ORM\Table(name="facture", indexes={@ORM\Index(name="id_reservation", columns={"reservation_id"})})
+ * @ORM\Entity
  */
 class Facture
 {
     /**
      * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
     /**
      * @var float
+     *
+     * @ORM\Column(name="somme_facture", type="float", precision=10, scale=0, nullable=true)
      */
     private $sommeFacture;
 
     /**
      * @var \DateTime
+     *
+     * @ORM\Column(name="date_payement_facture", type="date", nullable=true)
      */
     private $datePayementFacture;
 
     /**
-     * @var \Travel\AgenceBundle\Entity\Reservation
+     * @var \Reservation
+     *
+     * @ORM\ManyToOne(targetEntity="Reservation")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="reservation_id", referencedColumnName="id")
+     * })
      */
-    private $idReservation;
+    private $reservation;
+
 
 
     /**
@@ -87,25 +104,25 @@ class Facture
     }
 
     /**
-     * Set idReservation
+     * Set reservation
      *
-     * @param \Travel\AgenceBundle\Entity\Reservation $idReservation
+     * @param \Travel\AgenceBundle\Entity\Reservation $reservation
      * @return Facture
      */
-    public function setIdReservation(\Travel\AgenceBundle\Entity\Reservation $idReservation = null)
+    public function setReservation(\Travel\AgenceBundle\Entity\Reservation $reservation = null)
     {
-        $this->idReservation = $idReservation;
+        $this->reservation = $reservation;
 
         return $this;
     }
 
     /**
-     * Get idReservation
+     * Get reservation
      *
      * @return \Travel\AgenceBundle\Entity\Reservation 
      */
-    public function getIdReservation()
+    public function getReservation()
     {
-        return $this->idReservation;
+        return $this->reservation;
     }
 }
