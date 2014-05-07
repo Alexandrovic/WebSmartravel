@@ -18,14 +18,17 @@ TravelAgenceBundle_travel_facture:
         resource: "@TravelAgenceBundle/Resources/config/routing/facture.yml"
         prefix:   /travel_facture     
              
-TravelAgenceBundle_travel_agence:
+TravelAgenceBundle_travel_respagence:
         resource: "@TravelAgenceBundle/Resources/config/routing/respoagence.yml"
-        prefix:   /travel_agence
+        prefix:   /travel_respagence
         
 TravelAgenceBundle_travel_reservation:
         resource: "@TravelAgenceBundle/Resources/config/routing/reservation.yml"
         prefix:   /travel_reservation
-    
+     
+        
 TravelAgenceBundle_travel_voyage:
         resource: "@TravelAgenceBundle/Resources/config/routing/voyage.yml"
-        prefix:   /travel_voyage    
+        prefix:   /travel_voyage   
+   
+   

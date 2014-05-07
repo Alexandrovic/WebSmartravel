@@ -23,8 +23,10 @@ class RespoAgenceType extends AbstractType
             ->add('password')
             ->add('dateInscription')
             ->add('nomAgence')
-            ->add('active')
-            ->add('commentaire')
+            ->add('commentaire','textarea', array(
+                    'attr' => array(
+                    'class' => 'tinymce',
+                    'data-theme' => 'simple')) )
             ->add('region')
             ->add('longitude')
             ->add('latitude')

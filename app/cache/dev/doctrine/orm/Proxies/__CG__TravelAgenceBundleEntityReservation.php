@@ -64,10 +64,10 @@ class Reservation extends \Travel\AgenceBundle\Entity\Reservation implements \Do
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'id', 'dateReservation', 'payement', 'voyageurReservation', 'voyageReservation', 'factureReservation');
+            return array('__isInitialized__', 'id', 'dateReservation', 'payement', 'facture', 'voyageur', 'voyage');
         }
 
-        return array('__isInitialized__', 'id', 'dateReservation', 'payement', 'voyageurReservation', 'voyageReservation', 'factureReservation');
+        return array('__isInitialized__', 'id', 'dateReservation', 'payement', 'facture', 'voyageur', 'voyage');
     }
 
     /**
@@ -235,67 +235,78 @@ class Reservation extends \Travel\AgenceBundle\Entity\Reservation implements \Do
     /**
      * {@inheritDoc}
      */
-    public function setVoyageurReservation(\Travel\AgenceBundle\Entity\Voyageur $voyageurReservation = NULL)
+    public function setFacture(\Travel\AgenceBundle\Entity\Facture $facture = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVoyageurReservation', array($voyageurReservation));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setFacture', array($facture));
 
-        return parent::setVoyageurReservation($voyageurReservation);
+        return parent::setFacture($facture);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getVoyageurReservation()
+    public function getFacture()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVoyageurReservation', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getFacture', array());
 
-        return parent::getVoyageurReservation();
+        return parent::getFacture();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function setVoyageReservation(\Travel\AgenceBundle\Entity\Voyage $voyageReservation = NULL)
+    public function setVoyageur(\Travel\AgenceBundle\Entity\Voyageur $voyageur = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVoyageReservation', array($voyageReservation));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVoyageur', array($voyageur));
 
-        return parent::setVoyageReservation($voyageReservation);
+        return parent::setVoyageur($voyageur);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getVoyageReservation()
+    public function getVoyageur()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVoyageReservation', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVoyageur', array());
 
-        return parent::getVoyageReservation();
+        return parent::getVoyageur();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function setFactureReservation(\Travel\AgenceBundle\Entity\Facture $factureReservation = NULL)
+    public function setVoyage(\Travel\AgenceBundle\Entity\Voyage $voyage = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setFactureReservation', array($factureReservation));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVoyage', array($voyage));
 
-        return parent::setFactureReservation($factureReservation);
+        return parent::setVoyage($voyage);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getFactureReservation()
+    public function getVoyage()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getFactureReservation', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVoyage', array());
 
-        return parent::getFactureReservation();
+        return parent::getVoyage();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+
+        return parent::__toString();
     }
 
 }

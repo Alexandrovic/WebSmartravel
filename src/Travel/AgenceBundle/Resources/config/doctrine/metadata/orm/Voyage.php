@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Voyage
  *
- * @ORM\Table(name="voyage", indexes={@ORM\Index(name="fk_voyage_respo_agence1_idx", columns={"respo_agence_id"}), @ORM\Index(name="hotel-id", columns={"hotel-id"})})
+ * @ORM\Table(name="voyage", indexes={@ORM\Index(name="fk_voyage_respo_agence1_idx", columns={"respo_agence_id"}), @ORM\Index(name="hotel-id", columns={"hotel_id"})})
  * @ORM\Entity
  */
 class Voyage
@@ -52,14 +52,14 @@ class Voyage
     /**
      * @var string
      *
-     * @ORM\Column(name="programme", type="string", length=45, nullable=true)
+     * @ORM\Column(name="programme", type="string", length=500, nullable=true)
      */
     private $programme;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="itineraire", type="string", length=45, nullable=true)
+     * @ORM\Column(name="itineraire", type="string", length=300, nullable=true)
      */
     private $itineraire;
 
@@ -113,10 +113,10 @@ class Voyage
      *
      * @ORM\ManyToOne(targetEntity="Hotel")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="hotel-id", referencedColumnName="Id")
+     *   @ORM\JoinColumn(name="hotel_id", referencedColumnName="Id")
      * })
      */
-    private $hotelId;
+    private $hotel;
 
     /**
      * @var \Doctrine\Common\Collections\Collection

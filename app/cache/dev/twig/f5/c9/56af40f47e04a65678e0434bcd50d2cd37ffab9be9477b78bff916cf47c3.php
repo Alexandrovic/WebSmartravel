@@ -54,24 +54,38 @@ class __TwigTemplate_f5c956af40f47e04a65678e0434bcd50d2cd37ffab9be9477b78bff916c
         echo "</td>
             </tr>
             <tr>
-                <th>Email</th>
+                <th>Login</th>
                 <td>";
         // line 22
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "login"), "html", null, true);
+        echo "</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>";
+        // line 26
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "eMail"), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Password</th>
                 <td>";
-        // line 26
+        // line 30
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "password"), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Dateinscription</th>
                 <td>";
-        // line 30
+        // line 34
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "dateInscription"), "Y-m-d H:i:s"), "html", null, true);
+        echo "</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>";
+        // line 38
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "image"), "html", null, true);
         echo "</td>
             </tr>
         </tbody>
@@ -80,7 +94,7 @@ class __TwigTemplate_f5c956af40f47e04a65678e0434bcd50d2cd37ffab9be9477b78bff916c
         <ul class=\"record_actions\">
     <li>
         <a href=\"";
-        // line 37
+        // line 45
         echo $this->env->getExtension('routing')->getPath("travel_voyageur");
         echo "\">
             Back to the list
@@ -88,14 +102,14 @@ class __TwigTemplate_f5c956af40f47e04a65678e0434bcd50d2cd37ffab9be9477b78bff916c
     </li>
     <li>
         <a href=\"";
-        // line 42
+        // line 50
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("travel_voyageur_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
         echo "\">
             Edit
         </a>
     </li>
     <li>";
-        // line 46
+        // line 54
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "</li>
 </ul>
@@ -114,6 +128,6 @@ class __TwigTemplate_f5c956af40f47e04a65678e0434bcd50d2cd37ffab9be9477b78bff916c
 
     public function getDebugInfo()
     {
-        return array (  99 => 46,  92 => 42,  84 => 37,  74 => 30,  67 => 26,  60 => 22,  53 => 18,  46 => 14,  39 => 10,  31 => 4,  28 => 3,);
+        return array (  113 => 54,  106 => 50,  98 => 45,  88 => 38,  81 => 34,  74 => 30,  67 => 26,  60 => 22,  53 => 18,  46 => 14,  39 => 10,  31 => 4,  28 => 3,);
     }
 }

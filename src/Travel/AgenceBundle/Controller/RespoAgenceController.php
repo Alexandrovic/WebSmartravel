@@ -44,7 +44,7 @@ class RespoAgenceController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('travel_agence_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('travel_respagence_show', array('id' => $entity->getId())));
         }
 
         return $this->render('TravelAgenceBundle:RespoAgence:new.html.twig', array(
@@ -63,7 +63,7 @@ class RespoAgenceController extends Controller
     private function createCreateForm(RespoAgence $entity)
     {
         $form = $this->createForm(new RespoAgenceType(), $entity, array(
-            'action' => $this->generateUrl('travel_agence_create'),
+            'action' => $this->generateUrl('travel_respagence_create'),
             'method' => 'POST',
         ));
 
@@ -142,7 +142,7 @@ class RespoAgenceController extends Controller
     private function createEditForm(RespoAgence $entity)
     {
         $form = $this->createForm(new RespoAgenceType(), $entity, array(
-            'action' => $this->generateUrl('travel_agence_update', array('id' => $entity->getId())),
+            'action' => $this->generateUrl('travel_respagence_update', array('id' => $entity->getId())),
             'method' => 'PUT',
         ));
 
@@ -171,7 +171,7 @@ class RespoAgenceController extends Controller
         if ($editForm->isValid()) {
             $em->flush();
 
-            return $this->redirect($this->generateUrl('travel_agence_edit', array('id' => $id)));
+            return $this->redirect($this->generateUrl('travel_respagence_edit', array('id' => $id)));
         }
 
         return $this->render('TravelAgenceBundle:RespoAgence:edit.html.twig', array(
@@ -201,7 +201,7 @@ class RespoAgenceController extends Controller
             $em->flush();
         }
 
-        return $this->redirect($this->generateUrl('travel_agence'));
+        return $this->redirect($this->generateUrl('travel_respagence'));
     }
 
     /**
@@ -214,7 +214,7 @@ class RespoAgenceController extends Controller
     private function createDeleteForm($id)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('travel_agence_delete', array('id' => $id)))
+            ->setAction($this->generateUrl('travel_respagence_delete', array('id' => $id)))
             ->setMethod('DELETE')
             ->add('submit', 'submit', array('label' => 'Delete'))
             ->getForm()

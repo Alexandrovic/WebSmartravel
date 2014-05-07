@@ -15,20 +15,56 @@ class VoyageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('moyenTransport')
-            ->add('destination')
+            ->add('moyenTransport', 'choice', array(
+                'empty_value' => 'Choisissez un trasport',
+                'choices' => array(
+                    'Voiture location ' => 'Voiture location',
+                    'Autobus touristique' => 'Autobus touristique',
+                    'Avion' => 'Avion',
+                    ),
+                'required'  => false,
+                ))
+            ->add('destination', 'choice', array(
+                'empty_value' => 'Choisissez une Destination',
+                'choices' => array(
+                    'Hammamet' => 'Hammamet',
+                    'Djerba' => 'Djerba',
+                    'Sousse' => 'Sousse',
+                    'Sud tunisien' => 'Sud tunisien',
+                    'Yasmine Hammamet' => 'Yasmine Hammamet'
+                    ),
+                'required'  => false,
+                ))
             ->add('budget')
             ->add('nbPlace')
-            ->add('programme')
+            ->add('programme','textarea', array(
+                    'attr' => array(
+                    'class' => 'tinymce',
+                    'data-theme' => 'simple')))
             ->add('itineraire')
             ->add('dateDepart')
             ->add('dateRetour')
-            ->add('type')
-            ->add('typesortie')
+            ->add('type','choice', array(
+                    'choices' => array(
+                    'Proposition' => 'Proposition',
+                    'Offre' => 'Offre',
+                    'Annonce' => 'Annonce',
+                   ),
+                'required'  => true,
+                ) )
+            ->add('typesortie','choice', array(
+                    'choices' => array(
+                    'Sejour' => 'Sejour',
+                    'Weekend' => 'Weekend',
+                    'Randonnee' => 'Randonnee',
+                    'Vacances' => 'Vacances',
+                    'Voyage du noce' => 'Voyage du noce'    
+                    ),
+                'required'  => true,
+                ))
             ->add('image')
-            ->add('respoAgence')
-            ->add('hotelId')
-            ->add('voyageur')
+            ->add('respoAgence', 'choice', array())
+       
         ;
     }
     

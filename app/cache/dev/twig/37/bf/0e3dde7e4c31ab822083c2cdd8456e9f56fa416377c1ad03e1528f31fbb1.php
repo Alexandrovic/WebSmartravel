@@ -38,6 +38,7 @@ class __TwigTemplate_37bf0e3dde7e4c31ab822083c2cdd8456e9f56fa416377c1ad03e1528f3
                 <th>Prenom</th>
                 <th>Cin</th>
                 <th>Email</th>
+                <th>Phonenumber</th>
                 <th>Password</th>
                 <th>Dateinscription</th>
                 <th>Nomagence</th>
@@ -51,80 +52,84 @@ class __TwigTemplate_37bf0e3dde7e4c31ab822083c2cdd8456e9f56fa416377c1ad03e1528f3
         </thead>
         <tbody>
         ";
-        // line 26
+        // line 27
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-            // line 27
+            // line 28
             echo "            <tr>
                 <td><a href=\"";
-            // line 28
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("travel_agence_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
+            // line 29
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("travel_respagence_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"), "html", null, true);
             echo "</a></td>
                 <td>";
-            // line 29
+            // line 30
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "nom"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 30
+            // line 31
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "prenom"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 31
+            // line 32
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "cin"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 32
+            // line 33
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "eMail"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 33
+            // line 34
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "phoneNumber"), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 35
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "password"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 34
+            // line 36
             if ($this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "dateInscription")) {
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "dateInscription"), "Y-m-d H:i:s"), "html", null, true);
             }
             echo "</td>
                 <td>";
-            // line 35
+            // line 37
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "nomAgence"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 36
+            // line 38
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "active"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 37
+            // line 39
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "commentaire"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 38
+            // line 40
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "region"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 39
+            // line 41
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "longitude"), "html", null, true);
             echo "</td>
                 <td>";
-            // line 40
+            // line 42
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "latitude"), "html", null, true);
             echo "</td>
                 <td>
                 <ul>
                     <li>
                         <a href=\"";
-            // line 44
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("travel_agence_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
+            // line 46
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("travel_respagence_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
             echo "\">show</a>
                     </li>
                     <li>
                         <a href=\"";
-            // line 47
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("travel_agence_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
+            // line 49
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("travel_respagence_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
             echo "\">edit</a>
                     </li>
                 </ul>
@@ -135,15 +140,15 @@ class __TwigTemplate_37bf0e3dde7e4c31ab822083c2cdd8456e9f56fa416377c1ad03e1528f3
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 53
+        // line 55
         echo "        </tbody>
     </table>
 
         <ul>
         <li>
             <a href=\"";
-        // line 58
-        echo $this->env->getExtension('routing')->getPath("travel_agence_new");
+        // line 60
+        echo $this->env->getExtension('routing')->getPath("travel_respagence_new");
         echo "\">
                 Create a new entry
             </a>
@@ -164,6 +169,6 @@ class __TwigTemplate_37bf0e3dde7e4c31ab822083c2cdd8456e9f56fa416377c1ad03e1528f3
 
     public function getDebugInfo()
     {
-        return array (  146 => 58,  139 => 53,  127 => 47,  121 => 44,  114 => 40,  110 => 39,  106 => 38,  102 => 37,  98 => 36,  94 => 35,  88 => 34,  84 => 33,  80 => 32,  76 => 31,  72 => 30,  68 => 29,  62 => 28,  59 => 27,  55 => 26,  31 => 4,  28 => 3,);
+        return array (  151 => 60,  144 => 55,  132 => 49,  126 => 46,  119 => 42,  115 => 41,  111 => 40,  107 => 39,  103 => 38,  99 => 37,  93 => 36,  89 => 35,  85 => 34,  81 => 33,  77 => 32,  73 => 31,  69 => 30,  63 => 29,  60 => 28,  56 => 27,  31 => 4,  28 => 3,);
     }
 }
