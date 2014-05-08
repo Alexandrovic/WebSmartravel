@@ -191,4 +191,10 @@ class Reservation
     {
         return $this->voyage;
     }
+    public function __toString() {
+    
+        return "".$this->id+$this->getVoyage()+$this->getVoyage() ;
+    }
+    
+
 }

@@ -64,10 +64,10 @@ class Voyage extends \Travel\AgenceBundle\Entity\Voyage implements \Doctrine\ORM
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'id', 'moyenTransport', 'destination', 'budget', 'nbPlace', 'programme', 'itineraire', 'dateDepart', 'dateRetour', 'type', 'typesortie', 'image', 'respoAgence', 'hotelId', 'voyageur');
+            return array('__isInitialized__', 'id', 'moyenTransport', 'destination', 'budget', 'nbPlace', 'programme', 'itineraire', 'dateDepart', 'dateRetour', 'type', 'typesortie', 'image', 'respoAgence', 'hotel', 'voyageur');
         }
 
-        return array('__isInitialized__', 'id', 'moyenTransport', 'destination', 'budget', 'nbPlace', 'programme', 'itineraire', 'dateDepart', 'dateRetour', 'type', 'typesortie', 'image', 'respoAgence', 'hotelId', 'voyageur');
+        return array('__isInitialized__', 'id', 'moyenTransport', 'destination', 'budget', 'nbPlace', 'programme', 'itineraire', 'dateDepart', 'dateRetour', 'type', 'typesortie', 'image', 'respoAgence', 'hotel', 'voyageur');
     }
 
     /**
@@ -173,17 +173,6 @@ class Voyage extends \Travel\AgenceBundle\Entity\Voyage implements \Doctrine\ORM
     }
 
     
-    /**
-     * {@inheritDoc}
-     */
-    public function __toString()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
-
-        return parent::__toString();
-    }
-
     /**
      * {@inheritDoc}
      */
@@ -466,23 +455,23 @@ class Voyage extends \Travel\AgenceBundle\Entity\Voyage implements \Doctrine\ORM
     /**
      * {@inheritDoc}
      */
-    public function setHotelId(\Travel\AgenceBundle\Entity\Hotel $hotelId = NULL)
+    public function setHotel(\Travel\AgenceBundle\Entity\Hotel $hotel = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setHotelId', array($hotelId));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setHotel', array($hotel));
 
-        return parent::setHotelId($hotelId);
+        return parent::setHotel($hotel);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getHotelId()
+    public function getHotel()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getHotelId', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getHotel', array());
 
-        return parent::getHotelId();
+        return parent::getHotel();
     }
 
     /**
@@ -516,6 +505,17 @@ class Voyage extends \Travel\AgenceBundle\Entity\Voyage implements \Doctrine\ORM
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVoyageur', array());
 
         return parent::getVoyageur();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+
+        return parent::__toString();
     }
 
 }

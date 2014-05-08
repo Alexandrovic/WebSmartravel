@@ -107,10 +107,8 @@ class Voyage
      * })
      */
     private $respoAgence;
-    public function __toString() {
-     return $this->respoAgence;        
-    }
-
+  
+   
     
     /**
      * @var \Hotel
@@ -121,7 +119,8 @@ class Voyage
      * })
      */
     private $hotel;
-
+   
+   
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
@@ -129,6 +128,7 @@ class Voyage
      */
     private $voyageur;
 
+    
     /**
      * Constructor
      */
@@ -478,5 +478,11 @@ class Voyage
     public function getVoyageur()
     {
         return $this->voyageur;
+    }
+    
+     public function __toString() {
+         
+     return "".$this->id;   
+     
     }
 }

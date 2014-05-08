@@ -297,4 +297,9 @@ class Voyageur
     {
         return $this->voyage;
     }
+    public function __toString() {
+        
+        return "".$this->id+" "+"".$this->nom ;
+    }
+
 }

@@ -375,4 +375,15 @@ class Voyageur extends \Travel\AgenceBundle\Entity\Voyageur implements \Doctrine
         return parent::getVoyage();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+
+        return parent::__toString();
+    }
+
 }

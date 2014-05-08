@@ -152,4 +152,9 @@ class Hotel
     {
         return $this->image;
     }
+    public function __toString() {
+        return  $this->nomHotel;
+        
+    }
+
 }

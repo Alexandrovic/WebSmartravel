@@ -125,4 +125,10 @@ class Facture
     {
         return $this->reservation;
     }
+    
+    public function __toString() {
+        
+        return "".$this->id+"".$this->datePayementFacture ;
+    }
+
 }

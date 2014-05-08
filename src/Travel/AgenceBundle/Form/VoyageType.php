@@ -63,8 +63,9 @@ class VoyageType extends AbstractType
                 'required'  => true,
                 ))
             ->add('image')
-            ->add('respoAgence', 'choice', array())
-       
+            ->add('respoAgence')
+            ->add('hotel')
+            ->add('voyageur')
         ;
     }
     

@@ -474,4 +474,15 @@ class RespoAgence extends \Travel\AgenceBundle\Entity\RespoAgence implements \Do
         return parent::getLatitude();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+
+        return parent::__toString();
+    }
+
 }

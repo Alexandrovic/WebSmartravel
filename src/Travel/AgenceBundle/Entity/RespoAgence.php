@@ -424,4 +424,10 @@ class RespoAgence
     {
         return $this->latitude;
     }
-}
+    public function __toString() {
+        return $this->nomAgence ; 
+    }
+
+    
+    }
+
