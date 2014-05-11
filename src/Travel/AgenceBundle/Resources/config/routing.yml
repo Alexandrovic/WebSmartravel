@@ -1,11 +1,15 @@
 travel_agence_homepage:
-    pattern:  /hello/{name}
+    pattern:  /
     defaults: { _controller: TravelAgenceBundle:Default:index }
     
 TravelAgenceBundle_travel_voyageur:
      resource: "@TravelAgenceBundle/Resources/config/routing/voyageur.yml"
      prefix:   /travel_voyageur
-
+     
+TravelAgenceBundle_travel_proposition:
+     resource: "@TravelAgenceBundle/Resources/config/routing/proposition.yml"
+     prefix:   /travel_proposition
+     
 TravelAgenceBundle_travel_hotel:
      resource: "@TravelAgenceBundle/Resources/config/routing/hotel.yml"
      prefix:   /travel_hotel

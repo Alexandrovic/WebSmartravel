@@ -36,16 +36,6 @@ class Reservation
     private $payement;
 
     /**
-     * @var \Facture
-     *
-     * @ORM\ManyToOne(targetEntity="Facture")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="facture_id", referencedColumnName="id")
-     * })
-     */
-    private $facture;
-
-    /**
      * @var \Voyageur
      *
      * @ORM\ManyToOne(targetEntity="Voyageur")
@@ -64,6 +54,16 @@ class Reservation
      * })
      */
     private $voyage;
+
+    /**
+     * @var \Facture
+     *
+     * @ORM\ManyToOne(targetEntity="Facture")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="facture_id", referencedColumnName="id")
+     * })
+     */
+    private $facture;
 
 
 }

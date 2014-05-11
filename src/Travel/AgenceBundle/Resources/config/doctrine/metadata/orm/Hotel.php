@@ -45,7 +45,7 @@ class Hotel
     /**
      * @var string
      *
-     * @ORM\Column(name="image", type="string", length=50, nullable=false)
+     * @ORM\Column(name="image", type="string", length=50, nullable=true)
      */
     private $image;
 

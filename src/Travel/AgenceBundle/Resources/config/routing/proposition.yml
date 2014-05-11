@@ -1,0 +1,22 @@
+travel_proposition:
+    pattern:  /
+    defaults: { _controller: "TravelAgenceBundle:Voyage:index" }
+
+travel_proposition_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TravelAgenceBundle:Voyage:show" }
+
+travel_proposition_new:
+    pattern:  /new
+    defaults: { _controller: "TravelAgenceBundle:Voyage:new" }
+
+travel_proposition_create:
+    pattern:  /create
+    defaults: { _controller: "TravelAgenceBundle:Voyage:create" }
+    requirements: { _method: post }
+
+
+travel_proposition_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TravelAgenceBundle:Voyage:delete" }
+    requirements: { _method: post|delete }
