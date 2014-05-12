@@ -17,19 +17,13 @@ class RespoAgenceType extends AbstractType
         $builder
             ->add('nom')
             ->add('prenom')
-            ->add('cin')
+            ->add('cin','text')
             ->add('eMail')
             ->add('phoneNumber')
-            ->add('password')
-            ->add('dateInscription')
+            ->add('password','password')
             ->add('nomAgence')
-            ->add('commentaire','textarea', array(
-                    'attr' => array(
-                    'class' => 'tinymce',
-                    'data-theme' => 'simple')) )
             ->add('region')
-            ->add('longitude')
-            ->add('latitude')
+            
         ;
     }
     
