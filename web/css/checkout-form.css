@@ -1,0 +1,249 @@
+/**
+ * Checkout Form
+ * -------------------------------------
+ */
+.fcorn-checkout {
+  font-family: "Source Sans Pro";
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+.fcorn-checkout .billing-box,
+.fcorn-checkout .payment-box {
+  background: #fff;
+  border: 1px solid #eee;
+  letter-spacing: 1px;
+  box-shadow: 0 0 2px rgba(60, 60, 60, 0.1);
+  padding: 15px 25px;
+}
+.fcorn-checkout .billing-box h2.head,
+.fcorn-checkout .payment-box h2.head {
+  padding: 15px 20px;
+  background: #4cbeed;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.fcorn-checkout .billing-box h2.head > span,
+.fcorn-checkout .payment-box h2.head > span {
+  display: block;
+  font-size: 12px;
+  text-indent: 2px;
+}
+.fcorn-checkout .billing-box p,
+.fcorn-checkout .payment-box p {
+  margin-bottom: 30px;
+}
+.fcorn-checkout .billing-box p > input,
+.fcorn-checkout .payment-box p > input,
+.fcorn-checkout .billing-box p > select,
+.fcorn-checkout .payment-box p > select {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 15px;
+  font-weight: 100;
+  color: #686868;
+  border: 1px solid rgba(159, 159, 159, 0.2);
+  box-shadow: 0 0 3px rgba(60, 60, 60, 0.05);
+}
+.fcorn-checkout .billing-box p > input:focus,
+.fcorn-checkout .payment-box p > input:focus,
+.fcorn-checkout .billing-box p > select:focus,
+.fcorn-checkout .payment-box p > select:focus {
+  border: 1px solid #63c6ef;
+  outline: none;
+}
+.fcorn-checkout .billing-box p > select:focus,
+.fcorn-checkout .payment-box p > select:focus {
+  border: 1px solid rgba(159, 159, 159, 0.2);
+}
+
+/** To hide default arrow */
+.fcorn-checkout .billing-box p > select,
+.fcorn-checkout .payment-box p > select {
+  text-indent: 0.01px; /** if it doesn't work change to something 0.05 etc... **/
+  text-overflow: "";
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.fcorn-checkout .billing-box p > select::-ms-expand,
+.fcorn-checkout .payment-box p > select::-ms-expand {
+  display: none;
+}
+.fcorn-checkout .billing-box p.state-wrap,
+.fcorn-checkout .payment-box p.state-wrap,
+.fcorn-checkout .billing-box p.country-wrap,
+.fcorn-checkout .payment-box p.country-wrap,
+.fcorn-checkout .billing-box p.city-wrap,
+.fcorn-checkout .payment-box p.city-wrap,
+.fcorn-checkout .billing-box p.card-type-wrap,
+.fcorn-checkout .payment-box p.card-type-wrap,
+.fcorn-checkout .billing-box p.month-wrap,
+.fcorn-checkout .payment-box p.month-wrap {
+  position: relative;
+}
+  /** For custom arrow in select box **/
+.fcorn-checkout .billing-box p.state-wrap:before,
+.fcorn-checkout .payment-box p.state-wrap:before,
+.fcorn-checkout .billing-box p.country-wrap:before,
+.fcorn-checkout .payment-box p.country-wrap:before,
+.fcorn-checkout .billing-box p.city-wrap:before,
+.fcorn-checkout .payment-box p.city-wrap:before,
+.fcorn-checkout .billing-box p.card-type-wrap:before,
+.fcorn-checkout .payment-box p.card-type-wrap:before,
+.fcorn-checkout .billing-box p.month-wrap:before,
+.fcorn-checkout .payment-box p.month-wrap:before {
+  position: absolute;
+  content: "#";
+  font-family: "entypo";
+  font-size: 18px;
+  color: #686868;
+  top: 10px;
+  right: 25px;
+}
+.fcorn-checkout .billing-box p > span.extern-type,
+.fcorn-checkout .payment-box p > span.extern-type {
+  float: right;
+  text-align: right;
+  font-size: 12px;
+  display: block;
+  color: #b5b5b5;
+}
+ /** this is inside row **/
+.fcorn-checkout .billing-box p[class^="col-md"] > span.extern-type,
+.fcorn-checkout .payment-box p[class^="col-md"] > span.extern-type {
+  position: absolute;
+  right: 15px;
+}
+.fcorn-checkout .payment-box {
+}
+
+  /** Checkout Toogle Btn **/
+.fcorn-checkout .payment-box p.checkout-toggle {
+  position: relative;
+}
+.fcorn-checkout .payment-box p.checkout-toggle > .info {
+  font-size: 13px;
+  margin-left: 20px;
+}
+.fcorn-checkout .payment-box p.checkout-toggle > label.toggle-label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  display: inline-block;
+  background: #4cbeed;
+  width: 60px;
+  height: 24px;
+  float: left;
+  position: relative;
+  font-size: 10px;
+  color: #fff;
+}
+.fcorn-checkout .payment-box p.checkout-toggle > label.toggle-label > input.toggle-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+  /** this is for labeling of on/off text **/
+.fcorn-checkout .payment-box p.checkout-toggle > label.toggle-label:before,
+.fcorn-checkout .payment-box p.checkout-toggle > label.toggle-label:after {
+  position: absolute;
+  top: 30%;
+  line-height: 1.1;
+  font-weight: 100;
+}
+.fcorn-checkout .payment-box p.checkout-toggle > label.toggle-label:before {
+  content: attr(data-on);
+  left: 7px;
+}
+.fcorn-checkout .payment-box p.checkout-toggle > label.toggle-label:after {
+  content: attr(data-off);
+  right: 7px;
+}
+
+  /** handle switch **/
+.fcorn-checkout .payment-box p.checkout-toggle > label.toggle-label .toggle-handle {
+  position: absolute;
+  background: #fff;
+  left: 0;
+  top: 0;
+  border: 1px solid #4cbeed;
+  display: inline-block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  box-shadow: inset 0 0 5px rgba(50, 50, 50, 0.1);
+  width: 50%;
+  height: inherit;
+}
+.fcorn-checkout .payment-box p.checkout-toggle > label.toggle-label > input.toggle-input:checked ~ .toggle-handle {
+  left: 30px;
+}
+
+  /** Buttons **/
+.fcorn-checkout .payment-box p.checkout-submit,
+.fcorn-checkout .payment-box p.checkout-paypal {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+  /* Checkout button */
+.fcorn-checkout .payment-box p.checkout-submit > input {
+  border: none;
+  width: 180px;
+  color: #fff;
+  padding: 10px 15px;
+  background: #43bbec;
+  text-align: center;
+  letter-spacing: 1px;
+  box-shadow: 0 1px 1px #1daae3;
+}
+.fcorn-checkout .payment-box p.checkout-submit > input:focus {
+  border: none;
+  outline: none;
+}
+.fcorn-checkout .payment-box p.checkout-submit > input:hover {
+  background: #39b7eb;
+}
+.fcorn-checkout .payment-box p.checkout-submit > input:active {
+  box-shadow: inset 0 0 10px #1daae3;
+  -webkit-transform: translate(0, 1px);
+  -ms-transform: translate(0, 1px);
+  transform: translate(0, 1px);
+}
+
+ /** Paypal Button **/
+.fcorn-checkout .payment-box p.checkout-paypal > a {
+  border: 1px solid #f2f2f2;
+  display: inline-block;
+  padding: 8px;
+  text-align: center;
+  width: 215px;
+  position: relative;
+  top: -1px;
+  color: #686868;
+  font-weight: bold;
+  box-shadow: 0 1px 1px rgba(200, 200, 200, 0.3);
+}
+.fcorn-checkout .payment-box p.checkout-paypal > a:hover,
+.fcorn-checkout .payment-box p.checkout-paypal > a:active,
+.fcorn-checkout .payment-box p.checkout-paypal > a:focus {
+  text-decoration: none;
+  outline: none;
+}
+.fcorn-checkout .payment-box p.checkout-paypal > a:active {
+  box-shadow: none;
+  -webkit-transform: translate(0, 1px);
+  -ms-transform: translate(0, 1px);
+  transform: translate(0, 1px);
+}
+.fcorn-checkout .payment-box p.checkout-paypal > a > img {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+}

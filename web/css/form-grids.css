@@ -1,0 +1,30 @@
+/**
+ * Form Grids
+ * -------------------------------------
+ */
+.fcorn-grids {
+  font-family: "Source Sans Pro";
+  width: 800px;
+  margin: 0 auto;
+  padding: 30px 35px;
+  background: #fff;
+  border: 1px solid #eee;
+  letter-spacing: 1px;
+  box-shadow: 0 0 2px rgba(60, 60, 60, 0.1);
+}
+.fcorn-grids p {
+  margin-bottom: 30px;
+}
+.fcorn-grids p > input {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 15px;
+  font-weight: 100;
+  color: #686868;
+  border: 1px solid rgba(159, 159, 159, 0.2);
+  box-shadow: 0 0 3px rgba(60, 60, 60, 0.05);
+}
+.fcorn-grids p > input:focus {
+  border: 1px solid #8fd5f1;
+  outline: none;
+}

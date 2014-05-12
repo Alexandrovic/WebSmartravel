@@ -1,0 +1,207 @@
+
+/**
+ * Login Form
+ * --------------------------------------
+ */
+.fcorn-login {
+	font-family: "Source Sans Pro";
+	width: 640px;		/* Form width */
+	margin: 0 auto;
+	padding: 0;
+	background: #fff;
+	border: 1px solid #eee;
+	letter-spacing: 1px;
+	box-shadow: 0 0 2px rgba(60, 60, 60, 0.1);
+}
+
+	/** Left Login Side **/
+	.fcorn-login .login-left {
+	  color: #fff;
+	  padding: 25px;
+	  font-weight: 100;
+	  background: #4cbeed;
+	  box-shadow: 0 0 2px rgba(60, 60, 60, 0.1);
+	}
+		.fcorn-login .login-left .head {
+		  margin-top: 15px;
+		  margin-bottom: 50px;
+		}
+		.fcorn-login .login-left label.input-label {
+		  border: 1px solid rgba(255, 255, 255, 0.15);
+		  display: block;
+		  padding: 10px 15px;
+		  margin-bottom: 15px;
+		  font-weight: 100;
+		  background: #78ccee;
+		}
+		.fcorn-login .login-left .login-btn {
+		  border: none;
+		  width: 100%;
+		  color: #fff;
+		  padding: 10px 15px;
+		  background: #6fc9ed;
+		  text-align: center;
+		  letter-spacing: 1px;
+		  box-shadow: 0 1px 1px #34b2e5;
+		  margin-top: 50px;
+		}
+			.fcorn-login .login-left .login-btn:focus {
+			  border: none;
+			  outline: none;
+			}
+			.fcorn-login .login-left .login-btn:hover {
+			  background: #66c5ec;
+			}
+			.fcorn-login .login-left .login-btn:active {
+			  box-shadow: inset 0 0 10px #1daae3;
+			  -webkit-transform: translate(0, 1px);
+			  -ms-transform: translate(0, 1px);
+			  transform: translate(0, 1px);
+			}
+
+
+
+/** Right Login Side **/
+.fcorn-login .login-right {
+  background: #fff;
+  padding: 25px 40px;
+  text-align: center;
+}
+	.fcorn-login .login-right ul.social {
+	  padding-left: 0;
+	  list-style: none;
+	  margin-top: 15px;
+	  margin-bottom: 15px;
+	  text-align: center;
+	}
+	.fcorn-login .login-right ul.social > li {
+	  width: 48%;
+	  display: inline-block;
+	}
+	.fcorn-login .login-right ul.social > li:first-child {
+	  background: #3b5998;
+	  margin-right: 6px;
+	}
+		.fcorn-login .login-right ul.social > li:first-child:hover {
+		  background: #37538d;
+		}
+		.fcorn-login .login-right ul.social > li:last-child {
+		  background: #15b3e4;
+		}
+			.fcorn-login .login-right ul.social > li:last-child:hover {
+			  background: #14a8d6;
+			}
+			.fcorn-login .login-right ul.social > li > a {
+			  display: inline-block;
+			  padding: 7px 25px 8px;
+			  color: #fff;
+			  letter-spacing: 1px;
+			}
+				.fcorn-login .login-right ul.social > li > a:active,
+				.fcorn-login .login-right ul.social > li > a:focus,
+				.fcorn-login .login-right ul.social > li > a:hover {
+				  text-decoration: none;
+				  outline: none;
+				}
+				.fcorn-login .login-right ul.social > li > a:before {
+				  line-height: 1.428571429;
+				  margin-right: 10px;
+				  position: relative;
+				  top: 2px;
+				}
+	.fcorn-login .login-right .short-desc {
+	  display: block;
+	  margin-bottom: 15px;
+	  font-size: 12px;
+	  text-shadow: 0 0 1px rgba(100, 80, 90, 0.1);
+	  color: #686868;
+	  text-transform: uppercase;
+	}
+	.fcorn-login .login-right > span.icon {
+	  display: block;
+	  width: 100%;
+	  margin-bottom: 15px;
+	  position: relative;
+	  overflow: hidden;
+	}
+	.fcorn-login .login-right > span.icon:before {
+	  position: absolute;
+	  right: 0px;
+	  border-left: 1px solid rgba(159, 159, 159, 0.2);
+	  padding: 10px 15px;
+	  line-height: 1.428571429;
+	  font-size: 16px;
+	  color: #4cbeed;
+	}
+		.fcorn-login .login-right > span.icon > input {
+		  display: inline-block;
+		  width: inherit;
+		  padding: 10px 15px;
+		  padding-right: 55px;
+		  border: 1px solid rgba(159, 159, 159, 0.2);
+		  color: #020202;
+		  box-shadow: 0 0 3px rgba(60, 60, 60, 0.05);
+		}
+			.fcorn-login .login-right > span.icon > input:focus {
+			  border: 1px solid #63c6ef;
+			  outline: none;
+			}
+		.fcorn-login .login-right > .forget-pass > a {
+		  float: right;
+		  text-align: right;
+		  font-weight: 100;
+		  width: 100%;
+		  font-size: 12px;
+		  text-decoration: underline;
+		  color: #4cbeed;
+		}
+		/** Check Box **/
+		.fcorn-login .login-right > label.check-label {
+		  -webkit-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  -o-user-select: none;
+		  user-select: none;
+		  cursor: pointer;
+		  display: inline-block;
+		  float: right;
+		  white-space: normal;
+		  line-height: 1.85;
+		  top: 2px;
+		  margin-top: 40px;
+		  font-weight: normal;
+		  position: relative;
+		  font-size: 13px;
+		  color: #686868;
+		}
+			.fcorn-login .login-right > label.check-label > input.check-input {
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  opacity: 0;
+			}
+				.fcorn-login .login-right > label.check-label:before {
+				  content: "";
+				  position: absolute;
+				  display: inline-block;
+				  width: 14px;
+				  height: 14px;
+				  left: -23px;
+				  top: 5px;
+				  border: 1px solid #4cbeed;
+				}
+				.fcorn-login .login-right > label.check-label .info {
+				  position: relative;
+				}
+				.fcorn-login .login-right > label.check-label > input.check-input:checked + .info:before {
+				  content: "J";
+				  font-family: "entypo";
+				  position: absolute;
+				  color: #4cbeed;
+				  font-size: 12px;
+				  line-height: 1;
+				  text-align: center;
+				  left: -22px;
+				  top: 2px;
+				}
+/* End Login Form */

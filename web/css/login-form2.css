@@ -1,0 +1,123 @@
+/**
+ * Login Form 2
+ * --------------------------------------
+ */
+.fcorn-login-2 {
+  font-family: "Source Sans Pro";
+  border-radius: 2px;
+  width: 420px;
+  padding: 40px;
+  padding-bottom: 25px;
+  background: #fff;
+  border: 1px solid #eee;
+  letter-spacing: 1px;
+  box-shadow: 0 0 2px rgba(60, 60, 60, 0.1);
+}
+  .fcorn-login-2 span.icon,
+  .fcorn-login-2 span.forget-pass {
+    display: block;
+  }
+  .fcorn-login-2 span.icon {
+    position: relative;
+    overflow: hidden;
+  }
+  .fcorn-login-2 span.icon:before {
+    position: absolute;
+    left: 0px;
+    padding: 10px 15px;
+    line-height: 1.428571429;
+    font-size: 16px;
+    color: #43bbec;
+  }
+    .fcorn-login-2 span.icon > input {
+      display: inline-block;
+      width: 100%;
+      padding: 10px 15px;
+      padding-left: 55px;
+      margin-bottom: 15px;
+      border: none;
+      color: #686868;
+      border-bottom: 1px solid rgba(159, 159, 159, 0.2);
+      box-shadow: 0 0 3px rgba(60, 60, 60, 0.05);
+    }
+    .fcorn-login-2 span.icon > input:-moz-placeholder {
+      color: #b5b5b5;
+      text-align: center;
+    }
+    .fcorn-login-2 span.icon > input::-moz-placeholder {
+      color: #b5b5b5;
+      text-align: center;
+    }
+    .fcorn-login-2 span.icon > input:-ms-input-placeholder {
+      color: #b5b5b5;
+      text-align: center;
+    }
+    .fcorn-login-2 span.icon > input::-webkit-input-placeholder {
+      color: #b5b5b5;
+      text-align: center;
+    }
+    .fcorn-login-2 span.icon > input:focus {
+      border-bottom: 1px solid #63c6ef;
+      outline: none;
+    }
+    .fcorn-login-2 span.forget-pass > a {
+      float: left;
+      text-align: left;
+      font-weight: 100;
+      width: 100%;
+      font-size: 12px;
+      text-decoration: underline;
+      color: #4cbeed;
+    }
+    /** Login Btn **/
+.fcorn-login-2 .login-btn {
+  position: relative;
+}
+.fcorn-login-2 .login-btn > input,
+.fcorn-login-2 .signup-btn {
+  border: none;
+  width: 128px;
+  display: inline-block;
+  color: #fff;
+  padding: 8px 15px;
+  background: #43bbec;
+  box-shadow: 0 1px 1px #169ed7;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  position: relative;
+}
+.fcorn-login-2 .login-btn > input:focus,
+.fcorn-login-2 .signup-btn:focus {
+  border: none;
+  outline: none;
+}
+.fcorn-login-2 .login-btn > input:hover,
+.fcorn-login-2 .signup-btn:hover {
+  background: #39b7eb;
+}
+.fcorn-login-2 .login-btn:before,
+.fcorn-login-2 .signup-btn:before {
+  position: absolute;
+  color: #43bbec;
+  font-family: "entypo";
+  font-weight: 100;
+  font-size: 12px;
+  top: 10px;
+}
+.fcorn-login-2 .login-btn:before {
+  content: "\e024";
+  right: -38px;
+  top: 40px;
+}
+.fcorn-login-2 .signup-btn:before {
+  content: "\e071";
+  left: -38px;
+}
+.fcorn-login-2 .signup-btn {
+  float: right;
+}
+.fcorn-login-2 .signup-btn:hover,
+.fcorn-login-2 .signup-btn:focus {
+  text-decoration: none;
+}
