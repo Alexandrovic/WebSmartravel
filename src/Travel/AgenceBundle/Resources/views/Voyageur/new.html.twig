@@ -1,15 +1,57 @@
 {% extends '::base.html.twig' %}
+{#{% extends "TravelAgenceBundle::layout.html.twig" %}#}
+{% block body %}
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>Formicon-Flat Forms Pack</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="{{asset('icons/styles.css')}}" media="screen">
+            <link rel="stylesheet" href="{{asset('css/bootstrap-custom.css')}}" media="screen">
+            <link rel="stylesheet" href="{{asset('css/demo.css')}}" media="screen">
+            <link rel="stylesheet" href="{{asset('css/registration-form.css')}}" media="screen">
 
-{% block body -%}
-    <h1>Voyageur creation</h1>
+            <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600' rel='stylesheet' type='text/css'>
 
-    {{ form(form) }}
+        </head>
+        <body>
+            <!-- Only for Demo -->
+            <!-- End -->
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('travel_voyageur') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+            <!-- Register Form -->
+            <div class="form-wrapper"> <!-- Form-wrapper only for positioning -->
+                <p>{{form_start(form,{'attr': {'class': 'fcorn-register container'}}) }}</p>
+                <p> Entrez Prenom</p>
+                <p>{{ form_widget(form.prenom)}}</p>
+                <p> Entrez Nom</p>
+                <p>{{ form_widget(form.nom)}}</p>
+                <p> Entrez login</p>
+                <p>{{ form_widget(form.login)}}</p>
+                <p> Entrez e-Mail</p>
+                <p>{{ form_widget(form.eMail)}}
+                    <span class="extern-type">We'll keep this private.</span>
+                </p>
+                <p> Entrez Mot de passe</p>
+                <p>{{ form_widget(form.password)}}
+                    <span class="extern-type">Atleast 8 characters long.</span>
+                </p>
+                <p>{{ form_widget(form.password)}}</p>                                
+                <p class="register-toggle">
+                    <label for="register-agree" class="toggle-label" data-on="YES" data-off="NO">
+                        <span class="toggle-handle"></span>
+                    </label>
+                    <span class="info">Do you agree to the <a href="#">terms and conditions?</a></span>
+                </p>
+                <p>{{form_end(form)}}</p>
+
+            </div>
+            <ul class="record_actions">
+                <li>
+                    <a href="{{ path('travel_voyageur') }}">
+                        Back to the list
+                    </a>
+                </li>
+            </ul>
+        </body>
+    </html>
 {% endblock %}
