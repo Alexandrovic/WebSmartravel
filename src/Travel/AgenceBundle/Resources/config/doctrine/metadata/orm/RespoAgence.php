@@ -87,7 +87,7 @@ class RespoAgence
     /**
      * @var string
      *
-     * @ORM\Column(name="commentaire", type="string", length=500, nullable=false)
+     * @ORM\Column(name="commentaire", type="string", length=500, nullable=true)
      */
     private $commentaire;
 
